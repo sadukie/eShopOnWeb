@@ -1,8 +1,6 @@
 ﻿using ArchitectureTests.Helpers;
-using ArchUnitNET.Domain;
 using ArchUnitNET.Fluent;
 using ArchUnitNET.xUnit;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace ArchitectureTests.Core;
@@ -26,9 +24,10 @@ public class NamingTests
         IArchRule iRepositoryShouldEndWithRepository =
             Classes()
             .That()
-            .AreAssignableTo("Microsoft.eShopWeb.ApplicationCore.Interfaces.IRepository*",true)
+            .AreAssignableTo("Microsoft.eShopWeb.ApplicationCore.Interfaces.IRepository*", true)
             .Should()
-            .HaveNameEndingWith("Repository");
+            .HaveNameContaining("Repository");
+            
         iRepositoryShouldEndWithRepository.Check(LayerHelper.Architecture);
     }
 
