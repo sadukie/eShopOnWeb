@@ -3,7 +3,10 @@
 {
 	"name": "eShopOnWeb",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
- 
+	"features":{
+		"ghcr.io/devcontainers/features/github-cli":{},
+		"ghcr.io/devcontainers/features/azure-cli":{},
+	},
 	"customizations": {
 		 // Configure properties specific to VS Code.
 		"vscode": {
