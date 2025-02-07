@@ -1,9 +1,10 @@
-﻿namespace ArchitectureTests;
+﻿namespace ArchitectureTests.Web;
 
 using ArchitectureTests.Helpers;
 using ArchUnitNET.Fluent;
 using ArchUnitNET.xUnit;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
+
 
 public class WebLayerTests
 {
